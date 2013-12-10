@@ -42,5 +42,20 @@
       <%end%>
       </tbody>
     </table>
+
+    <%= form_for [@movie, @showtime] do |f| %>
+      <div class="location">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+      </div>
+      <div class="time">
+        <%= f.lable :time %>
+        <%= f.text_field :time %>
+      </div>
+      <div class="submit">
+        <%= f.submit 'Create Showtime', :class => "button"%>
+      </div>
+      <%end%>
+      
   </div>
 </div>
