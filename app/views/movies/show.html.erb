@@ -34,18 +34,12 @@
       </thead>
 
       <tbody>
+        <%@showtimes.each do |showtime|%>
         <tr>
-          <td>Paramount Theater</td>
-          <td>10/5/13 2:00pm</td>
+          <td><%=showtime.location%></td>
+          <td><%=showtime.time%></td>
         </tr>
-        <tr>
-          <td>Tinseltown</td>
-          <td>10/5/13 4:00pm</td>
-        </tr>
-        <tr>
-          <td>Regal</td>
-          <td>10/5/13 7:00pm</td>
-        </tr>
+      <%end%>
       </tbody>
     </table>
   </div>
