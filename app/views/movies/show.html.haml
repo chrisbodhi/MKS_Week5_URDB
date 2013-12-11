@@ -10,6 +10,22 @@
       %i.icon-youtube-play
       =link_to "Watch the trailer on YouTube", @movie.trailer_url, {target: "blank"}
 
+#cast
+  %h2.centered Cast
+  %ul
+    %li
+      = image_tag('http://ia.media-imdb.com/images/M/MV5BODg3MzYwMjE4N15BMl5BanBnXkFtZTcwMjU5NzAzNw@@._V1_SY98_CR6,0,67,98_.jpg')
+      / %span.character Kate -
+      / Angelina Jolie
+      %span.character= "#{@movie.roles.find(6).character} -"  
+      = "#{@movie.stars.find(5).name}"
+    %li
+      = image_tag('http://ia.media-imdb.com/images/M/MV5BMjIyMjc0NTA2M15BMl5BanBnXkFtZTcwMTA4MzQ2OQ@@._V1_SY317_CR11,0,214,317_.jpg')
+      / %span.character Dade -
+      / Jonny Lee Miller
+      %span.character= "#{@movie.roles.find(5).character} -"  
+      = "#{@movie.stars.find(4).name}"
+
     #showtimes
       %h2.centered Showtimes
 
